@@ -17,4 +17,5 @@ public interface OSCommand extends Serializable{
     String readLineFromConsole();
     void clearScreen();
     void writeToScreen(String out);
+    void closeSystem();
 }

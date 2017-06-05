@@ -58,4 +58,8 @@ public class Linux implements OSCommand {
         System.out.print(out);
     }
 
+    @Override
+    public void closeSystem() {
+        System.exit(0);
+    }
 }

@@ -54,7 +54,7 @@ public class MainMenu implements Serializable{
                 showMenuAndWaitForAction();
                 break;
             case 5:
-                System.exit(0);
+                osCommand.closeSystem();
                 break;
             default:
                 osCommand.writeToScreen(config.getMenuFailure());
@@ -76,13 +76,12 @@ public class MainMenu implements Serializable{
         config.setPlayerChar(shape);
         
     }
-    private int getSelectedOption(String line) {
+    public int getSelectedOption(String line) {
         int numb = 0;
         if (!line.isEmpty()) {
             try {
                 numb = Integer.parseInt("" + line.charAt(0));
             } catch (Exception e) {
-
                 return numb;
             }
         }
